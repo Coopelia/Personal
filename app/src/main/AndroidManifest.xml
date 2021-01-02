@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.personal">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="个人理财通"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DataActivity"></activity>
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 注册activity -->
+        <activity android:name=".AActivity" />
+        <activity android:name=".BActivity" />
+        <activity android:name=".CActivity" />
+        <activity android:name=".CUpdateActivity" />
+        <activity android:name=".DActivity" />
+        <activity android:name=".DUpdateActivity" />
+        <activity android:name=".FActivity" />
+        <activity android:name=".FAUpdateActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".SetActivity" />
+        <activity android:name=".showChart" />
+        <activity android:name=".showIncome" />
+        <activity android:name=".showFA" />
+        <activity android:name=".LoginActivity" />
+    </application>
+
+</manifest>
