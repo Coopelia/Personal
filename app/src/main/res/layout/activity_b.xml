@@ -16,11 +16,11 @@
             android:layout_marginLeft="20dp"/>
 
         <EditText
+            android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText3"
             android:hint="0.00"
-            />
+            android:inputType="number" />
 
     </LinearLayout>
 
@@ -37,12 +37,11 @@
             android:layout_marginLeft="20dp"/>
 
         <EditText
+            android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText4"
             android:hint="2011-01-01"
-            android:inputType="textPassword"
-            />
+            android:inputType="number" />
 
     </LinearLayout>
 
@@ -80,11 +79,10 @@
             android:id="@+id/textView9" />
 
         <EditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:id="@+id/editText"
 
-            android:inputType="textPassword"
             />
 
 

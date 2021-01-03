@@ -75,6 +75,7 @@ public class showChart extends AppCompatActivity {
         //设置柱状图的字体大小
         dataSet1.setValueTextSize(20);
 
+        //设置数据名称
         IAxisValueFormatter axisValueFormatter=new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {

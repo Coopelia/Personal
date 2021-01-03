@@ -101,6 +101,7 @@ public class BActivity extends AppCompatActivity implements View.OnClickListener
                 contentValues.put("category",category);
                 contentValues.put("money", money);
                 contentValues.put("time", time);
+                contentValues.put("note", note);
                 db.insert("user_info",null,contentValues);
                 Toast.makeText(this,"操作成功",Toast.LENGTH_SHORT).show();
                 break;

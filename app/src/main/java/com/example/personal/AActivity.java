@@ -103,6 +103,7 @@ public class AActivity extends AppCompatActivity implements View.OnClickListener
                 contentValues.put("category",category);
                 contentValues.put("money", money);
                 contentValues.put("time", time);
+                contentValues.put("note", note);
                 db.insert("user_out",null,contentValues);
                 Toast.makeText(this,"新增成功",Toast.LENGTH_SHORT).show();
                 break;

@@ -82,6 +82,7 @@ public class CActivity extends AppCompatActivity implements AdapterView.OnItemCl
                 userOut.setCategory(cursor.getString(cursor.getColumnIndex("category")));
                 userOut.setMoney(cursor.getString(cursor.getColumnIndex("money")));
                 userOut.setTime(cursor.getString(cursor.getColumnIndex("time")));
+                userOut.setNote(cursor.getString(cursor.getColumnIndex("note")));
                 list.add(userOut);
             }
         }

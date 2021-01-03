@@ -83,6 +83,7 @@ public class DActivity extends AppCompatActivity implements AdapterView.OnItemCl
                 userInfo.setCategory(cursor.getString(cursor.getColumnIndex("category")));
                 userInfo.setMoney(cursor.getString(cursor.getColumnIndex("money")));
                 userInfo.setTime(cursor.getString(cursor.getColumnIndex("time")));
+                userInfo.setNote(cursor.getString(cursor.getColumnIndex("note")));
                 list.add(userInfo);
             }
         }

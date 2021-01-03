@@ -6,10 +6,12 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.personal.util.DBOpenHelper;
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
@@ -72,7 +74,16 @@ public class showIncome extends AppCompatActivity {
         //设置柱状图的字体大小
         dataSet1.setValueTextSize(20);
         //设置数据名称
-        dataSet1.setStackLabels(lables);
+        IAxisValueFormatter axisValueFormatter=new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                if (value >= 0) {
+                    return lables[(int) value % lables.length];
+                } else {
+                    return "";
+                }
+            }
+        };
 
         ArrayList<IBarDataSet> dataSets=new ArrayList<>();
         dataSets.add(dataSet1);
@@ -80,6 +91,7 @@ public class showIncome extends AppCompatActivity {
         barIncome.setData(barData);
         barIncome.getAxisLeft().setDrawLabels(true);
         barIncome.getAxisRight().setDrawLabels(false);
+        barIncome.getXAxis().setValueFormatter(axisValueFormatter);
         barIncome.getXAxis().setDrawLabels(true);
         barIncome.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
         barIncome.setTouchEnabled(false);//触摸
